@@ -16,7 +16,7 @@ No package installation, Node.js server, database or build command is required. 
 
 ## Google OAuth verification handoff
 
-Deploy the complete directory to a domain owned by MultiSpace Team and verify that domain in Google Search Console. The website, OAuth consent screen and iOS app must use the exact product name `AI Cleanup`, the same app icon and the same Gmail behavior.
+Deploy the complete directory to a domain owned by CODING APPLICATION and verify that domain in Google Search Console. The website, OAuth consent screen and iOS app must use the exact product name `AI Cleanup`, the same app icon and the same Gmail behavior.
 
 Configure Google Auth Platform with these public URLs after replacing the example domain:
 
