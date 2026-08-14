@@ -1,249 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Application - Mobile App Development</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #1a1a2e;
-            --accent: #4f46e5;
-            --text: #374151;
-            --text-light: #6b7280;
-            --bg: #ffffff;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        header {
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        .hero {
-            text-align: center;
-            padding: 80px 0 60px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto 32px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: background 0.2s;
-        }
-
-        .btn:hover {
-            background: #4338ca;
-        }
-
-        .apps {
-            padding: 40px 0 80px;
-        }
-
-        .apps h2 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary);
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .app-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .app-item {
-            text-align: center;
-        }
-
-        .app-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            margin: 0 auto 16px;
-        }
-
-        .app-icon.green {
-            background: linear-gradient(135deg, #10b981, #059669);
-        }
-
-        .app-icon.red {
-            background: linear-gradient(135deg, #f43f5e, #e11d48);
-        }
-
-        .app-icon.purple {
-            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-        }
-
-        .app-icon.blue {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-        }
-
-        .app-icon.orange {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-        }
-
-        .app-icon.teal {
-            background: linear-gradient(135deg, #14b8a6, #0d9488);
-        }
-
-        .app-item h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .app-item span {
-            font-size: 13px;
-            color: var(--text-light);
-        }
-
-        footer {
-            text-align: center;
-            padding: 32px 0;
-            border-top: 1px solid #e5e7eb;
-        }
-
-        footer p {
-            font-size: 14px;
-            color: var(--text-light);
-        }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .app-list {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MultiSpace Team — Thoughtful mobile utilities</title>
+  <meta name="description" content="MultiSpace Team builds focused mobile tools for Android and iOS, including MultiSpace and AI Cleanup.">
+  <meta name="theme-color" content="#111827">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.apptlsai.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MultiSpace Team">
+  <meta property="og:title" content="MultiSpace Team — Thoughtful mobile utilities">
+  <meta property="og:description" content="Focused Android and iOS tools that put you in control.">
+  <meta property="og:url" content="https://www.apptlsai.com/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MultiSpace Team — Thoughtful mobile utilities">
+  <meta name="twitter:description" content="Focused Android and iOS tools that put you in control.">
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="#" class="logo">Coding<span>Application</span></a>
-        </div>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="MultiSpace Team home"><span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>MultiSpace<span class="wordmark-light">Team</span></span></a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="#products">Products</a><a href="#approach">Our approach</a><a href="#contact">Contact</a></nav>
+      <a class="header-link" href="#products">Explore products <span aria-hidden="true">↘</span></a>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>We Build Mobile Apps</h1>
-            <p>Transforming ideas into powerful mobile experiences. From concept to launch, we're your trusted development partner.</p>
-            <a href="mailto:hello@appnova.com" class="btn">Start Your Project</a>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">INDEPENDENT MOBILE SOFTWARE</p>
+          <h1>Small tools.<br><em>More room</em> to live.</h1>
+          <p>We make focused Android and iOS utilities that help people keep their digital lives organized, private and entirely in their hands.</p>
+          <a class="primary-button" href="#products">Meet our products <span aria-hidden="true">↓</span></a>
         </div>
-    </section>
+        <div class="hero-art" aria-label="Abstract illustration representing separate and organized mobile spaces">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-grid"></div>
+          <div class="phone phone-back"><span></span><span></span><span></span></div>
+          <div class="phone phone-front"><div class="phone-notch"></div><div class="phone-topline"></div><div class="phone-title">Your space</div><div class="phone-card"><span class="phone-icon icon-purple"></span><div><b>Personal</b><small>Private &amp; clear</small></div></div><div class="phone-card"><span class="phone-icon icon-aqua"></span><div><b>Work</b><small>Ready when you are</small></div></div><div class="phone-card"><span class="phone-icon icon-yellow"></span><div><b>Cleanup</b><small>Review with care</small></div></div></div>
+          <div class="art-note note-one"><span>✦</span> Designed around you</div><div class="art-note note-two"><span>✓</span> You stay in control</div>
+        </div>
+      </section>
 
-    <section class="apps">
-        <div class="container">
-            <h2>Our Work</h2>
-            <div class="app-list">
-                <div class="app-item">
-                    <div class="app-icon blue">📥</div>
-                    <h3>VideoPro</h3>
-                    <span>Multi-platform video download support</span>
-                </div>
-                <div class="app-item">
-                    <div class="app-icon teal">📁</div>
-                    <h3>FileMaster</h3>
-                    <span>Built-in file manager for easy playback</span>
-                </div>
-                <div class="app-item">
-                    <div class="app-icon green">💳</div>
-                    <h3>PayFlow</h3>
-                    <span>FinTech App</span>
-                </div>
-                <div class="app-item">
-                    <div class="app-icon red">❤️</div>
-                    <h3>FitPulse</h3>
-                    <span>Health & Fitness</span>
-                </div>
-                <div class="app-item">
-                    <div class="app-icon purple">💬</div>
-                    <h3>Vibe</h3>
-                    <span>Social Platform</span>
-                </div>
-                <div class="app-item">
-                    <div class="app-icon orange">🛒</div>
-                    <h3>ShopNest</h3>
-                    <span>E-Commerce</span>
-                </div>
-            </div>
-        </div>
-    </section>
+      <section class="product-section" id="products" aria-labelledby="products-title">
+        <div class="section-intro"><p class="eyebrow">OUR PRODUCTS</p><h2 id="products-title">Two platforms.<br>One simple idea.</h2><p>Technology should make space for the things that matter—not demand more of it.</p></div>
+        <div class="product-grid">
+          <article class="product-card multispace-card">
+            <div class="product-card-top"><span class="platform-tag">ANDROID</span><span class="product-number">01</span></div>
+            <div class="product-symbol multispace-symbol" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="product-copy"><h3>MultiSpace</h3><p>Keep different parts of your digital life distinct. MultiSpace helps you create separate spaces for the apps you use every day.</p></div>
+            <ul class="product-points"><li>Separate app spaces</li><li>Simple, flexible control</li><li>Built for Android</li></ul>
+            <div class="product-actions"><a class="card-link" href="subscription_service_agreement_en.html">Subscription terms <span aria-hidden="true">↗</span></a><a class="quiet-link" href="mailto:coding_application@protonmail.com?subject=MultiSpace%20Support">Get support</a></div>
+          </article>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 CodingApplication. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+          <article class="product-card cleanup-card">
+            <div class="product-card-top"><span class="platform-tag">iOS</span><span class="product-number">02</span></div>
+            <div class="product-symbol cleanup-symbol" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div class="product-copy"><h3>AI Cleanup</h3><p>Review photos, videos and everyday digital clutter with clear, user-confirmed tools—plus optional Gmail cleanup on iPhone.</p></div>
+            <ul class="product-points"><li>On-device media analysis</li><li>Optional Gmail cleanup</li><li>Nothing changes without you</li></ul>
+            <div class="product-actions"><a class="card-link" href="home.html">Explore AI Cleanup <span aria-hidden="true">↗</span></a><a class="quiet-link" href="privacy.html">Privacy policy</a></div>
+          </article>
         </div>
+      </section>
+
+      <section class="approach-section" id="approach">
+        <div class="approach-intro"><p class="eyebrow">OUR APPROACH</p><h2>Useful is enough.</h2><p>We build for clarity over clutter. That means asking for only the access a feature needs, explaining how it is used, and leaving meaningful decisions with the person using the app.</p></div>
+        <div class="principles"><article><span>01</span><h3>Focused by design</h3><p>Each product has a clear job to do, without unnecessary complexity.</p></article><article><span>02</span><h3>Control stays local</h3><p>You decide what to keep, remove, connect or change.</p></article><article><span>03</span><h3>Plain-spoken privacy</h3><p>We explain permissions and data use in language people can understand.</p></article></div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div><a class="wordmark footer-wordmark" href="index.html"><span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>MultiSpace<span class="wordmark-light">Team</span></span></a><p>Thoughtful mobile utilities for everyday digital life.</p></div>
+      <div class="footer-contact"><span>CONTACT</span><a href="mailto:coding_application@protonmail.com">coding_application@protonmail.com</a></div>
+      <div class="footer-meta"><span>© 2026 MultiSpace Team</span><a href="privacy.html">AI Cleanup privacy</a><a href="subscription_service_agreement_en.html">MultiSpace terms</a></div>
     </footer>
+  </div>
 </body>
 </html>
