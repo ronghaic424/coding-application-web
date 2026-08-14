@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Service Agreement - MultiSpace</title>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var theme = (params.get("theme") || "auto").toLowerCase();
+      var allowedThemes = { light: true, dark: true, auto: true };
+
+      function resolveTheme(value) {
+        if (value === "dark") {
+          return "dark";
+        }
+        if (value === "light") {
+          return "light";
+        }
+        return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+
+      if (!allowedThemes[theme]) {
+        theme = "auto";
+      }
+
+      document.documentElement.setAttribute("data-theme-mode", theme);
+      document.documentElement.setAttribute("data-theme", resolveTheme(theme));
+
+      if (theme === "auto" && window.matchMedia) {
+        var media = window.matchMedia("(prefers-color-scheme: dark)");
+        var updateTheme = function () {
+          document.documentElement.setAttribute("data-theme", resolveTheme("auto"));
+        };
+
+        if (media.addEventListener) {
+          media.addEventListener("change", updateTheme);
+        } else if (media.addListener) {
+          media.addListener(updateTheme);
+        }
+      }
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --heading: #111827;
+      --muted: #667085;
+      --border: #e4e7ec;
+      --accent: #d99100;
+      --accent-soft: #fff4d6;
+      --summary-bg: #f9fafb;
+      --link: #0b63ce;
+      --shadow: rgba(15, 23, 42, 0.06);
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #101318;
+      --card: #171b22;
+      --text: #e5e7eb;
+      --heading: #f9fafb;
+      --muted: #a3aab7;
+      --border: #2a303a;
+      --accent: #f6b73c;
+      --accent-soft: #332611;
+      --summary-bg: #111820;
+      --link: #8ab4ff;
+      --shadow: rgba(0, 0, 0, 0.36);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 16px 40px var(--shadow);
+    }
+
+    h1, h2 {
+      line-height: 1.25;
+      color: var(--heading);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+    }
+
+    h2 {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 20px;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    ul {
+      margin: 10px 0 10px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .meta {
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .notice {
+      margin: 24px 0;
+      padding: 16px 18px;
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+    }
+
+    .summary {
+      margin-top: 28px;
+      padding: 18px;
+      background: var(--summary-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px 10px;
+      }
+
+      main {
+        padding: 22px 18px;
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Subscription Service Agreement</h1>
+    <div class="meta">
+      App: <span data-config="appName">MultiSpace</span><br>
+      Package name: <span data-config="packageName">com.code.multiapp</span><br>
+      Last updated: <span data-config="lastUpdated">May 6, 2026</span><br>
+      Effective date: <span data-config="effectiveDate">May 6, 2026</span>
+    </div>
+
+    <p>
+      This Subscription Service Agreement ("Agreement") applies to your purchase, renewal, cancellation,
+      and use of subscription services in <span data-config="appName">MultiSpace</span> ("App", "we", "us", or "our"). By purchasing,
+      confirming, renewing, or using a subscription, you confirm that you have read, understood, and agreed
+      to this Agreement.
+    </p>
+
+    <div class="notice">
+      Subscriptions are processed through Google Play. Subscription price, billing period, renewal terms,
+      trial offers, cancellation options, and refund availability are subject to the information displayed at
+      checkout and the applicable Google Play policies.
+    </div>
+
+    <h2>1. Subscription Service</h2>
+    <p>
+      <span data-config="appName">MultiSpace</span> may offer paid subscription plans that unlock premium features during the active
+      subscription period. The exact premium benefits are shown in the App and may include, but are not
+      limited to:
+    </p>
+    <ul>
+      <li>More app clone capacity or fewer clone limitations;</li>
+      <li>Home screen shortcut support for cloned apps;</li>
+      <li>App lock or other privacy-related premium features;</li>
+      <li>Enhanced notification, background, or clone management capabilities;</li>
+      <li>Access to future premium improvements or advanced features.</li>
+    </ul>
+    <p>
+      Non-subscribed users may continue to use the basic features of the App, but some premium features may
+      be limited or unavailable.
+    </p>
+
+    <h2>2. Plans, Pricing, and Availability</h2>
+    <p>
+      We may offer different subscription plans, such as weekly, monthly, semi-annual, annual, or other
+      billing periods. The available plans may vary by country or region, time, promotion, device, account,
+      or Google Play configuration.
+    </p>
+    <p>
+      The price, currency, billing cycle, trial period, introductory offer, and renewal terms shown on the
+      Google Play purchase page or in the App at the time of purchase are the controlling terms for that
+      purchase.
+    </p>
+
+    <h2>3. Automatic Renewal</h2>
+    <p>
+      If you purchase an auto-renewing subscription, it will automatically renew at the end of each billing
+      period unless you cancel it before the renewal date in accordance with Google Play's subscription
+      management rules.
+    </p>
+    <p>
+      Subscription fees will be charged through your Google Play account or the payment method supported by
+      Google Play. Google Play may attempt to charge your payment method before the start of the next billing
+      period. If payment fails, your subscription may not renew and premium access may be interrupted.
+    </p>
+
+    <h2>4. Cancellation</h2>
+    <p>
+      You may cancel your subscription at any time through Google Play. In most cases, cancellation stops the
+      next renewal but does not immediately terminate the current paid period. You will usually continue to
+      have access to premium features until the end of the current billing period.
+    </p>
+    <p>You can manage or cancel your subscription by following these general steps:</p>
+    <ul>
+      <li>Open Google Play;</li>
+      <li>Tap your account profile icon;</li>
+      <li>Open Payments &amp; subscriptions;</li>
+      <li>Open Subscriptions;</li>
+      <li>Select <span data-config="appName">MultiSpace</span>;</li>
+      <li>Follow the instructions to manage or cancel the subscription.</li>
+    </ul>
+    <p>
+      The exact steps may vary depending on your device, Google Play version, account region, and operating
+      system.
+    </p>
+
+    <h2>5. Refunds</h2>
+    <p>
+      Refund requests, refund eligibility, refund review, and refund timing are generally handled by Google
+      Play according to Google Play's refund policies and applicable law.
+    </p>
+    <p>
+      Unless required by applicable law, Google Play policy, or expressly stated by us, subscription fees are
+      generally not automatically refundable because of personal reasons, forgetting to cancel, accidental
+      purchase, repeated purchase, non-use, or dissatisfaction after the subscription has been activated.
+    </p>
+    <p>
+      If your subscription does not activate properly, if you believe there is an abnormal charge, or if you
+      cannot access premium features after payment, please contact us or submit a request through Google Play.
+      If a refund is granted, the related premium benefits may be cancelled or terminated.
+    </p>
+
+    <h2>6. Use Restrictions</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Access premium features through illegal, cracked, modified, or unauthorized methods;</li>
+      <li>Bypass, interfere with, or manipulate subscription verification mechanisms;</li>
+      <li>Sell, rent, transfer, or commercially share subscription benefits;</li>
+      <li>Use premium features for illegal, infringing, fraudulent, abusive, or harmful activities;</li>
+      <li>Disrupt the normal operation, security, or integrity of the App or related services.</li>
+    </ul>
+    <p>
+      If we reasonably believe that you have violated this Agreement, applicable law, or platform rules, we
+      may limit, suspend, or terminate your access to subscription services where permitted by law.
+    </p>
+
+    <h2>7. Changes to Premium Benefits</h2>
+    <p>
+      We may update, improve, replace, add, or remove premium features due to product development, technical
+      requirements, business changes, legal requirements, or platform policy changes.
+    </p>
+    <p>
+      If a change materially affects the core benefits of an active paid subscription, we will make
+      reasonable efforts to notify users in the App or by other reasonable means, where required or
+      appropriate.
+    </p>
+
+    <h2>8. Service Interruption and Termination</h2>
+    <p>
+      Subscription services may be interrupted, delayed, or unavailable because of maintenance, updates,
+      network issues, device compatibility, third-party service failure, Google Play service issues,
+      payment service issues, force majeure, or other reasons beyond our reasonable control.
+    </p>
+    <p>
+      We will use reasonable efforts to maintain the App and subscription services, but we do not guarantee
+      that the services will always be uninterrupted, error-free, fully compatible with every device, or able
+      to meet every personal expectation.
+    </p>
+
+    <h2>9. Account and Device</h2>
+    <p>
+      Subscription status is generally associated with the Google Play account used for purchase. If you
+      change devices, reinstall the App, reset your device, or switch Google accounts, please make sure you
+      are using the same Google Play account that purchased the subscription.
+    </p>
+    <p>
+      If the App cannot detect your subscription because of account switching, Google Play unavailability,
+      device environment issues, network issues, or other technical conditions, you may need to restore the
+      purchase, reopen the App, check your Google Play account, or contact us for support.
+    </p>
+
+    <h2>10. Minors</h2>
+    <p>
+      If you are a minor under the laws of your country or region, you should purchase and use subscription
+      services only with the consent and guidance of your parent or legal guardian.
+    </p>
+    <p>
+      If a subscription was purchased by a minor without proper authorization, the parent or guardian should
+      contact Google Play or contact us as soon as possible.
+    </p>
+
+    <h2>11. Privacy</h2>
+    <p>
+      We process subscription-related information in accordance with our Privacy Policy. To verify and manage
+      subscriptions, we may process information such as subscription status, product ID, purchase token,
+      order status, device information, and related technical data.
+    </p>
+    <p>
+      We do not directly collect your full bank card number, payment password, or other sensitive payment
+      credentials. Payment processing is generally handled by Google Play or the relevant payment provider.
+    </p>
+
+    <h2>12. Disclaimer</h2>
+    <p>To the maximum extent permitted by applicable law, we are not responsible for losses caused by:</p>
+    <ul>
+      <li>Your device, operating system, network, account settings, or Google Play account status;</li>
+      <li>Google Play, payment services, operating system services, or other third-party services;</li>
+      <li>Your failure to cancel an auto-renewing subscription before renewal;</li>
+      <li>Your violation of this Agreement, laws, third-party app rules, or platform policies;</li>
+      <li>Force majeure or events outside our reasonable control.</li>
+    </ul>
+    <p>
+      The App and its clone, management, privacy, and premium features must be used only for lawful purposes.
+      You are responsible for ensuring that your use of the App complies with applicable laws, third-party
+      app terms, and platform rules.
+    </p>
+
+    <h2>13. Agreement Updates</h2>
+    <p>
+      We may update this Agreement from time to time due to product changes, legal requirements, platform
+      policy changes, or operational needs. The latest version will be made available in the App or another
+      reasonable location.
+    </p>
+    <p>
+      If an update materially affects your rights or obligations, we will make reasonable efforts to provide
+      notice where required. Your continued use of subscription services after the updated Agreement becomes
+      effective means that you accept the updated Agreement.
+    </p>
+
+    <h2>14. Contact Us</h2>
+    <p>
+      If you have questions about this Agreement, subscriptions, cancellation, refunds, or premium benefits,
+      please contact us:
+    </p>
+    <ul>
+      <li>App name: <span data-config="appName">MultiSpace</span></li>
+      <li>Package name: <span data-config="packageName">com.code.multiapp</span></li>
+      <li>Developer: <span data-config="developerName">MultiSpace Team</span></li>
+      <li>Email: <a data-config="email" href="mailto:ronghaichuan40@gmail.com">ronghaichuan40@gmail.com</a></li>
+      <li>Official website: <a data-config="websiteUrl" href="https://www.apptlsai.com/">https://www.apptlsai.com/</a></li>
+      <li data-optional="privacyPolicyUrl">Privacy Policy: <a data-config="privacyPolicyUrl" href="https://www.apptlsai.com/privacy.html">https://www.apptlsai.com/privacy.html</a></li>
+    </ul>
+
+    <div class="summary">
+      <strong>Short subscription notice:</strong>
+      Subscriptions are billed and automatically renewed through Google Play unless cancelled before the next
+      renewal date. After cancellation, premium benefits usually remain available until the end of the current
+      paid billing period. You can manage or cancel your subscription in Google Play under Payments &amp;
+      subscriptions. Prices, billing periods, trials, offers, and refund availability are subject to the
+      checkout page and Google Play policies.
+    </div>
+  </main>
+  <script>
+    (function () {
+      var defaults = {
+        appName: "MultiSpace",
+        packageName: "com.code.multiapp",
+        developerName: "MultiSpace Team",
+        email: "coding_application@protonmail.com",
+        lastUpdated: "May 6, 2026",
+        effectiveDate: "May 6, 2026",
+        privacyPolicyUrl: "https://www.apptlsai.com/privacy.html",
+        websiteUrl: "https://www.apptlsai.com/",
+        theme: "auto"
+      };
+
+      var aliases = {
+        app_name: "appName",
+        package_name: "packageName",
+        package: "packageName",
+        developer_name: "developerName",
+        contact_email: "email",
+        last_updated: "lastUpdated",
+        effective_date: "effectiveDate",
+        privacy_policy_url: "privacyPolicyUrl",
+        website_url: "websiteUrl"
+      };
+
+      var params = new URLSearchParams(window.location.search);
+      var config = Object.assign({}, defaults);
+
+      params.forEach(function (value, key) {
+        var configKey = aliases[key] || key;
+        if (Object.prototype.hasOwnProperty.call(config, configKey) && value.trim() !== "") {
+          config[configKey] = value.trim();
+        }
+      });
+
+      function safeUrl(value) {
+        try {
+          var url = new URL(value, window.location.href);
+          return url.protocol === "http:" || url.protocol === "https:" ? url.href : "";
+        } catch (_) {
+          return "";
+        }
+      }
+
+      document.title = "Subscription Service Agreement - " + config.appName;
+
+      document.querySelectorAll("[data-config]").forEach(function (node) {
+        var key = node.getAttribute("data-config");
+        var value = config[key] || "";
+
+        if (node.tagName === "A") {
+          node.textContent = value;
+          if (key === "email") {
+            node.href = "mailto:" + encodeURIComponent(value);
+          } else {
+            var url = safeUrl(value);
+            if (url) {
+              node.href = url;
+            }
+          }
+        } else {
+          node.textContent = value;
+        }
+      });
+
+      document.querySelectorAll("[data-optional]").forEach(function (node) {
+        var key = node.getAttribute("data-optional");
+        var value = config[key] || "";
+        node.hidden = !safeUrl(value);
+      });
+    })();
+  </script>
+</body>
+</html>

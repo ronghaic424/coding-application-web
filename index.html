@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Application - Mobile App Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a2e;
+            --accent: #4f46e5;
+            --text: #374151;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #4338ca;
+        }
+
+        .apps {
+            padding: 40px 0 80px;
+        }
+
+        .apps h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .app-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .app-item {
+            text-align: center;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 16px;
+        }
+
+        .app-icon.green {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .app-icon.red {
+            background: linear-gradient(135deg, #f43f5e, #e11d48);
+        }
+
+        .app-icon.purple {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .app-icon.blue {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        .app-icon.orange {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .app-icon.teal {
+            background: linear-gradient(135deg, #14b8a6, #0d9488);
+        }
+
+        .app-item h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .app-item span {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 0;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .app-list {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Coding<span>Application</span></a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>We Build Mobile Apps</h1>
+            <p>Transforming ideas into powerful mobile experiences. From concept to launch, we're your trusted development partner.</p>
+            <a href="mailto:hello@appnova.com" class="btn">Start Your Project</a>
+        </div>
+    </section>
+
+    <section class="apps">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="app-list">
+                <div class="app-item">
+                    <div class="app-icon blue">📥</div>
+                    <h3>VideoPro</h3>
+                    <span>Multi-platform video download support</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon teal">📁</div>
+                    <h3>FileMaster</h3>
+                    <span>Built-in file manager for easy playback</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon green">💳</div>
+                    <h3>PayFlow</h3>
+                    <span>FinTech App</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon red">❤️</div>
+                    <h3>FitPulse</h3>
+                    <span>Health & Fitness</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon purple">💬</div>
+                    <h3>Vibe</h3>
+                    <span>Social Platform</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon orange">🛒</div>
+                    <h3>ShopNest</h3>
+                    <span>E-Commerce</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CodingApplication. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+</html>
