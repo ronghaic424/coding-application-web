@@ -11,6 +11,7 @@ No package installation, Node.js server, database or build command is required. 
 - `privacy.html` — privacy policy
 - `terms.html` — terms of use
 - `support.html` — support and Google access-revocation guidance
+- `video-resources.html` — interactive video resource management UI with CRUD and batch upload demo
 - `styles.css` — shared responsive styling
 - `public/` — app icon, favicon and social image
 
